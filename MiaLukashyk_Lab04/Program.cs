@@ -25,7 +25,7 @@ namespace MiaLukashyk_Lab04
                 Experience = experience;
                 Level = level;
             }
-            public string Level {  get; set; }
+            public string Level;
             public string Tool { get; set; }
             public int Experience { get; set; }
             public void Create()
@@ -105,7 +105,7 @@ namespace MiaLukashyk_Lab04
 
 
             Dictionary<uint, string> dict = new Dictionary<uint, string>();
-            for(int i = 0; i < 1; ++i)
+            for(int i = 0; i < 7; ++i)
             {
                 Console.Write("Enter id: ");
                 uint id = uint.Parse(Console.ReadLine());
@@ -118,9 +118,9 @@ namespace MiaLukashyk_Lab04
             {
                 Console.WriteLine(dict[idToFind]);
             }
-            catch(Exception ex)
+            catch
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("No such person");
             }
 
 
