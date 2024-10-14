@@ -19,12 +19,13 @@ namespace MiaLukashyk_Lab04
         }
         public class Programmer : IDeveloper, IComparable<IDeveloper>
         {
-            public Programmer(string tool = "hands", int experience = 0)
+            public Programmer(string tool = "hands", int experience = 0, string level = "trainee")
             {
                 Tool = tool;
                 Experience = experience;
+                Level = level;
             }
-
+            public string Level {  get; set; }
             public string Tool { get; set; }
             public int Experience { get; set; }
             public void Create()
@@ -44,7 +45,7 @@ namespace MiaLukashyk_Lab04
 
             public override string ToString()
             {
-                return "Developer: " + Tool + " " + Experience;
+                return "Developer: " + Tool + " " + Experience + " " + Level;
             }
         }
         public class Builder : IDeveloper, IComparable<IDeveloper>
